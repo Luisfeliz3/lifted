@@ -10,14 +10,16 @@ router.get("/", (req, res) => {
     .findAll({
       order: [["id", "DESC"]]
     })
-    .then((workouts) => {
-      console.log(workouts);
-      res.render("index", { workouts: workouts });
-    })
+    .then(workouts => 
+      
+      res.render("index", {workouts : workouts} )
+    )
     .catch((err) => {
       res.status(500);
       next(err);
     });
-});        
+});  
+
+
 
 module.exports = router;

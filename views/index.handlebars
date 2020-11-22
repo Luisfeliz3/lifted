@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="m-4 jumbotron jumbotron-fluid rounded">
+        <div class="container">
+            <div id="category-container" class='col rounded'>
+                <h1 id="category-title" class="fixed-fixed-width float-right display-3">Lifted</h1>
+
+                <img class="border-image" src="/assets/images/logo.png" alt="Legs Anatomy" width="500" height="600">
+                <p id="category-details" class="collead">Lifted is a motivational app that will inspire all people from
+                    all levels of workouts. The app will guide you with the correct exercises to try for each body part.
+                    With motivational instructions and pictures.
+                </p>
+                <hr class="my-2">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col">
+                <form action="gigs.html" class="search-form">
+                    <i class="fas fa-search"></i>
+                    <input id=search-text type="search" name="term"
+                        placeholder="Search for a workout arms, legs, abs etc...">
+                    <input id="submit-button" type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+
+        <section class="">
+
+            {{> viewWorkouts}}
+        </section>

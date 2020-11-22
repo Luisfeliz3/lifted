@@ -36,3 +36,4 @@ db.sequelize.sync(/*{ force: config.sync }*/).then(async () => {
     console.log(`🌎 => live on http://localhost:${PORT}`);
   });
 });
+
