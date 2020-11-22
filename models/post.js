@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const post = sequelize.define("workouts", {
+  const categories = sequelize.define("workouts", {
     title: {
       type: DataTypes.STRING(50),
     },
@@ -7,16 +7,16 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING(500),
     },
     img_or_video: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(1024),
     }
   });
 
-  post.associate = function (models) {
-    post.belongsTo(models.exercises, {
-      foreignKey: {
-        allowNull: false,
-      },
-    });
-  };
-  return post;
+  // categories.associate = function (models) {
+  //   categories.belongsTo(models.legs, {
+  //     foreignKey: {
+  //       allowNull: false,
+  //     },
+  //   });
+  // };
+  return categories;
 };

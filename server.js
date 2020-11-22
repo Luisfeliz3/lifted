@@ -2,7 +2,7 @@ const config = require("./config");
 const express = require("express");
 const path = require("path");
 const db = require("./models");
-const apiRoutes = require("./routes/api-routes");
+// const apiRoutes = require("./routes/api-routes");
 const htmlRoutes = require("./routes/html-routes");
 
 const PORT = process.env.PORT || 3000;
@@ -26,9 +26,9 @@ app.engine(
 );
 
 app.set("view engine", "handlebars");
-var routes = require("./routes/api-routes/index");
+// var routes = require("./routes/api-routes/index");
 
-app.use("/api", apiRoutes);
+// app.use("/api", apiRoutes);
 app.use(htmlRoutes);
 
 db.sequelize.sync(/*{ force: config.sync }*/).then(async () => {

@@ -5,10 +5,10 @@ const db = require("../../models");
 
 // routing (html) /posts
 router.get("/", (req, res) => {
-  // get posts from db and send to template
+  // // get posts from db and send to template
   db.post
     .findAll({
-      include: [db.userprofiles],
+      include: [db.posts],
       order: [["id", "DESC"]],
     })
     .then((posts) => {
