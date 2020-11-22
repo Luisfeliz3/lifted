@@ -5,19 +5,19 @@ const db = require("../../models");
 
 // routing (html) /posts
 router.get("/", (req, res) => {
-  // // get posts from db and send to template
-  db.post
+  // get posts from db and send to template
+  db.workouts
     .findAll({
-      include: [db.posts],
-      order: [["id", "DESC"]],
+      order: [["id", "DESC"]]
     })
-    .then((posts) => {
-      res.render("index", { posts: posts });
+    .then((workouts) => {
+      console.log(workouts);
+      res.render("index", { workouts: workouts });
     })
     .catch((err) => {
       res.status(500);
       next(err);
     });
-});
+});        
 
 module.exports = router;
