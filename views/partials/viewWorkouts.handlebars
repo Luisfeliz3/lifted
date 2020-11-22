@@ -1,9 +1,13 @@
 {{#each workouts}}
-<div class="container">
+
     <div class="row">
-        <div onclick="location.href='#';" style="cursor: pointer;" class="col-sm-3">
-            <img style="background-image: url('/assets/images/image3.jpg);">
+        <div onclick="location.href='#';" style="cursor: pointer;" class="col-sm-12">
+            {{!-- <img  src="{{this.dataValues.img_or_video}}" alt='workouts'> --}}
+            <div id="img" style="background-image: url : ({{this.dataValues.img_or_video}})";></div>
+            <h1>
+                {{this.dataValues.title}}
+            </h1>
         </div>
     </div>
     {{/each}}
-</div>
+
